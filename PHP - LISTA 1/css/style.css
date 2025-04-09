@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+h2 {
+    color: #555;
+}
+
+.container_resultado {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 1% 0.15%;
+    width: fit-content;
+}
+
+.container_resultado h2 {
+    margin-top: 0;
+}
+
+.container_resultado p {
+    margin: 5px 0;
+}
+
+
+.lista-produtos {
+    list-style: none;
+    padding: 0;
+    width: 300px;
+  }
+  
+  .produto-nome {
+    display: inline-block;
+    width: 200px;
+  }
+  
+  .produto-preco {
+    display: inline-block;
+    width: 80px;
+    text-align: right;
+  }
