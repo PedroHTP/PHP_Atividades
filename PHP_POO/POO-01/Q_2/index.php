@@ -4,19 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Questão 2: Triângulo</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
+    <div class="container_form">
+        <?php 
+            $lado1 = $_POST['lado1'] ?? null;
+            $lado2 = $_POST['lado2'] ?? null;
+            $lado3 = $_POST['lado3'] ?? null;
+        ?>
+
+        <h1>Calcule a área de um triângulo</h1>
+        <p>Insira os lados do triângulo:</p>
         <form action="./index.php" method="post">
-            <input type="number" name="lado1" id="lado1" >
-            <input type="number" name="lado1" id="lado2" >
-            <input type="number" name="lado1" id="lado3" >
+            <input type="number" placeholder="Lado 1" name="lado1" id="lado1" value="<?=$lado1?>" min="1">
+            <input type="number" placeholder="Lado 2" name="lado2" id="lado2" value="<?=$lado2?>" min="1">
+            <input type="number" placeholder="Lado 3" name="lado3" id="lado3" value="<?=$lado3?>" min="1">
             <input type="submit" value="Calcular">
         </form>
     </div>
-
-    <div>
+        
+    <div  class="container_form <?= $_SERVER['REQUEST_METHOD'] === 'POST' ? '' : 'desativado'?>">
         <h1>Resultado</h1>
+        <?php 
+            
+            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                
+
+                if (empty($lado1) || empty($lado2) || empty($lado3)) {
+                    echo "Preencha todos os campos!";
+                    exit;
+                }
+
+                if ($lado1 < 1 || $lado2 < 1 || $lado3 < 1) {
+                    echo "Insira valores maiores de 1!";
+                    exit;
+                }
+
+                $triangulo1 = new Triangulo(lado1: $lado1, lado2: $lado2, lado3: $lado3);
+                echo $triangulo1->getArea();
+            }
+
+        ?>
     </div>
     <?php 
         class Triangulo {
@@ -56,8 +85,7 @@
             }
         }
 
-        $triangulo1 = new Triangulo(lado1: 3, lado2: 4, lado3: 5);
-        echo $triangulo1->getArea();
+        
     ?>
 </body>
 </html>
