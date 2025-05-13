@@ -19,7 +19,7 @@
             return 
             "
             Nome: {$this -> nome} <br> 
-            Preço: {$this -> preco} <br> 
+            Preço: R$ ". number_format(num: $this -> preco, decimals: 2, decimal_separator: ',', thousands_separator: '.') ." <br> 
             Quantidade: {$this -> quantidade} <br>
             Valor Total: R$ ". number_format(num: $this -> valorTotal(), decimals: 2, decimal_separator: ',', thousands_separator: '.') ." <br>
             Estoque: {$this -> VerificarEstoque()} <br>

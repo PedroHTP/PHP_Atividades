@@ -27,7 +27,7 @@
             Nome: {$this -> nome} <br> 
             Matricula: {$this -> matricula} <br> 
             Quantidade de notas: {$this -> quantNota} <br>
-            Notas: " . implode(", ",  $this -> notas) . ".<br> 
+            Notas: " . implode(separator: ", ",  array: $this -> notas) . ".<br> 
             Média: {$this -> media()} <br> 
             Situação: {$this -> situacao()} <br>
             ";
