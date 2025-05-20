@@ -4,24 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Questão 5</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container_form">
-        <form action="./notas.php" method="post">
-            <h1>Questão 5: Aluno</h1>
-            <label for="nome">Nome:</label>
-            <input type="text" name="nome" id="nome" required value="<?= htmlspecialchars(string: $_POST['nome'] ?? '') ?>">
-
-            <label for="marticula">Matricula:</label>
-            <input type="text" name="matricula" id="matricula" required value="<?= htmlspecialchars(string: $_POST['matricula'] ?? '')?>">
-
-            <label for="quantNota">Quantidade de notas:</label>
-            <input type="number" name="quantNota" id="quantNota" required value="<?= htmlspecialchars(string: $_POST['quantNota'] ?? '')?>">
-
-            <input type="submit" value="Entrar">
-            
-        </form>
-
-    </div>
+    <main>
+        <div class="container_form">
+            <form action="./notas.php" method="post">
+                <h1>Questão 5: Aluno</h1>
+                <p>
+                    Olá, insira seus dados:
+                </p>
+                <div class="input_dados">
+        
+                    <div class="inputs">
+                        <label for="nome">Nome:</label>
+                        <input type="text" name="nome" id="nome" required value="<?= htmlspecialchars(string: $_POST['nome'] ?? '') ?>">
+                        <label for="marticula">Matricula:</label>
+                        <input type="text" name="matricula" id="matricula" required value="<?= htmlspecialchars(string: $_POST['matricula'] ?? '')?>">
+                        <label for="quantNota">Quantidade de notas:</label>
+                        <input type="number" name="quantNota" id="quantNota" required value="<?= htmlspecialchars(string: $_POST['quantNota'] ?? '')?>">
+                        
+                    </div>
+                </div>
+                <input type="submit" value="Entrar">
+        
+            </form>
+        </div>
+    </main>
 </body>
 </html>

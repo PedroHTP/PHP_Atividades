@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Questão 4: Retângulo</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container_form">
@@ -13,7 +14,7 @@
             <input type="number" name="base" id="base" required min="0" value="<?= isset($_POST['base']) ? htmlspecialchars(string: $_POST['base']): ''?>">
 
             <label for="largura">Largura (cm):</label>
-            <input type="number" name="largura" id="largura" required min="0" value="<?= isset($_POST['largura']) ? htmlspecialchars(string: $_POST['base']): ''?>">
+            <input type="number" name="largura" id="largura" required min="0" value="<?= isset($_POST['largura']) ? htmlspecialchars(string: $_POST['largura']): ''?>">
 
             <button type="submit">Calcular</button>
             

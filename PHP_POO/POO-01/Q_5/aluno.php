@@ -28,7 +28,7 @@
             Matricula: {$this -> matricula} <br> 
             Quantidade de notas: {$this -> quantNota} <br>
             Notas: " . implode(separator: ", ",  array: $this -> notas) . ".<br> 
-            Média: {$this -> media()} <br> 
+            Média: ".number_format(num: $this -> media(), decimals: 2, decimal_separator: ",", thousands_separator: ".")." <br> 
             Situação: {$this -> situacao()} <br>
             ";
         }
