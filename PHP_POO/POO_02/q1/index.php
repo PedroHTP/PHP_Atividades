@@ -16,7 +16,6 @@
 
     class Gerente extends Funcionario {
         public string $departamento;
-
         public function __construct($nome, $salario, $departamento) {
             $this->nome = $nome;
             $this->salario = $salario;
